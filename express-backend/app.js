@@ -27,6 +27,7 @@ var userRouter = require('./routes/registration');
 var login=require('./routes/login');
 var vehicleRoutes = require('./routes/vehicleRoutes')
 var getting=require("./routes/appending")
+
 // var adminportal=require('./routes/admin')
 // var userportal=require("./routes/users")
 app.use('/parking', vehicleRoutes);

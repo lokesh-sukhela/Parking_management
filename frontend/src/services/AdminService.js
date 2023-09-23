@@ -34,5 +34,7 @@ const deletedetails=async(id)=>{
 
 
 
-export default {getAllTrainingDetails,getTrainingById,trainingDetails,updateDetails,deletedetails}
+export default {getAllTrainingDetails,getTrainingById,trainingDetails,updateDetails,
+    
+    deletedetails}
 

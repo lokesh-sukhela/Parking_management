@@ -41,6 +41,21 @@ const getAllVehicles = async (req, res) => {
   }
 };
 
+const deleteVehiclebyid = async (req, res) => {
+  console.log("id",req.body.vehicle_id)
+  if(req.body.vehicle_id){
+    await vehicletable.destroy({
+      where : {
+        id : req.body.vehicle_id,
+      }
+    });
+    res.send({statusCode: 200, message: "deleted"})
+    console.log("delete Successful!")
+  } else{
+    res.status(400).send("delete failed!")
+  }
+};
+
 const getParkingEntryById = async (req, res) => {
 
   const { id } = req.params;
@@ -57,5 +72,5 @@ const getParkingEntryById = async (req, res) => {
 };
 
 module.exports = {
-    createVehicle,getAllVehicles,getParkingEntryById,
+    createVehicle,getAllVehicles,getParkingEntryById,deleteVehiclebyid
   };

@@ -8,6 +8,7 @@ const router = express.Router();
 
 // Create a new parking record
 router.post('/', vehicleController.createVehicle);
+router.put('/delete',vehicleController.deleteVehiclebyid);
 
 
 
